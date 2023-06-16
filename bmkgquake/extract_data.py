@@ -14,10 +14,6 @@ def extract_data():
     if content.status_code == 200:
         soup = BeautifulSoup(content.text, 'html.parser')
 
-        # To find content based on HTML tag
-        title = soup.find('title')
-        print(title.string)
-
         # Get ul-list which provide earthquake details
         result = soup.find('div', {'class': 'gempabumi-detail'})
         result = result.findChildren('li')

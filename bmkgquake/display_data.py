@@ -1,4 +1,5 @@
 def display_data(data):
+    print("Latest Earthquake Information in Indonesia")
     # To handle error/empty data
     if data is None:
         print("Can't find the latest earthquake data")
